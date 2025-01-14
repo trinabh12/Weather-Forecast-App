@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 text-white min-h-screen flex flex-col items-center py-8">
+    <!-- Heading -->
+    <h1 class="text-4xl font-bold mb-8">Weather App</h1>
+
+    <!-- Search Section -->
+    <div class="w-full md:w-10/12 flex items-start justify-start">
+        <div class="w-1/4 mr-8">
+            <input id="city" type="text" placeholder="Search your city..."
+                class="w-full p-3 rounded-md bg-gray-800 text-gray-200 outline-none mb-4" />
+            <button id="search" class="w-full px-4 py-3 rounded-md bg-blue-600 hover:bg-blue-700 transition mb-2">
+                Search
+            </button>
+            <p class="text-center text-gray-400 mb-2">OR</p>
+            <button id="current-location"
+                class="w-full px-4 py-3 rounded-md bg-green-600 hover:bg-green-700 transition">
+                Use Current Location
+            </button>
+        </div>
+
+        <!-- Weather Response Section -->
+        <div class="w-3/4 ml-8">
+            <!-- Current Weather Section -->
+            <div id="current-weather" class="hidden bg-gray-800 p-6 rounded-lg shadow-md mb-6 flex flex-col items-center">
+                <h2 id="location" class="text-2xl font-bold mb-2"></h2>
+                <p id="description" class="text-gray-400"></p>
+                <p id="temperature" class="text-3xl font-semibold my-2 flex items-center">
+                    <span></span>
+                    <img id="weather-icon" src="" alt="Weather Icon" class="ml-2 w-10 h-10" />
+                </p>
+                <p id="humidity" class="text-gray-400"></p>
+            </div>
+
+            <!-- 5-Day Forecast Section -->
+            <div id="forecast" class="flex gap-4 justify-between">
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
